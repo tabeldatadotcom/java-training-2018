@@ -13,6 +13,15 @@ import org.springframework.stereotype.Component;
  * @author dimasm93
  */
 public class DataBean {
+
+    public DataBean() {
+    }
+
+    public DataBean(OtherBean bean) {
+        this.bean = bean;
+    }
+    
+    
     
     private String id;
     private String nama;

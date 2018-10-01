@@ -18,8 +18,9 @@ import org.springframework.context.annotation.Configuration;
 public class ConfigurationSpring {
 
     @Bean
-    public DataBean withBeans() {
-        DataBean aBean = new DataBean();
+    public DataBean withBeans(OtherBean bean) {
+//        construktor injection
+        DataBean aBean = new DataBean(bean);
         aBean.setId("qwerqwerewqrewqr");
         aBean.setNama("Dimas Maryanto");
         return aBean;
@@ -27,6 +28,7 @@ public class ConfigurationSpring {
 
     @Bean
     public DataBean withBeans2(OtherBean bean) {
+//        setter injection
         DataBean aBean = new DataBean();
         aBean.setId("bean asli");
         aBean.setNama("Dimas Maryanto");
