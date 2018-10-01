@@ -19,8 +19,16 @@ public class ConfigurationSpring {
     @Bean
     public DataBean withBeans() {
         DataBean aBean = new DataBean();
-        aBean.setId("123423423");
-        aBean.setNama("asldfjasdlkfj");
+        aBean.setId("qwerqwerewqrewqr");
+        aBean.setNama("Dimas Maryanto");
+        return aBean;
+    }
+    
+    @Bean
+    public DataBean withBeans2() {
+        DataBean aBean = new DataBean();
+        aBean.setId("otherId");
+        aBean.setNama("Dimas Maryanto");
         return aBean;
     }
 }

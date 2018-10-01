@@ -20,7 +20,7 @@ public class BelajarApp {
         System.out.println("Halo ini java maven");
         ApplicationContext context = new AnnotationConfigApplicationContext(ConfigurationSpring.class);
 
-        DataBean aBean = context.getBean(DataBean.class);
+        DataBean aBean = context.getBean("withBeans2",DataBean.class);
         System.out.println(aBean.toString());
     }
 }
