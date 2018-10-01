@@ -1,0 +1,8 @@
+## maven project
+target/
+
+## netbeans
+settings.xml
+
+## systemfiles
+.DS_Store
