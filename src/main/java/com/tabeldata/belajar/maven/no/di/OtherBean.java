@@ -5,13 +5,19 @@
  */
 package com.tabeldata.belajar.maven.no.di;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author dimasm93
  */
+@Component
 public class OtherBean {
     
+    @Value("1341242134")
     private String id;
+    @Value("asfasdfdsafasf")
     private String nama;
 
     public String getId() {

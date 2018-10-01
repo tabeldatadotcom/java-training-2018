@@ -8,6 +8,7 @@ package com.tabeldata.belajar.maven;
 import com.tabeldata.belajar.maven.no.di.OtherBean;
 import com.tabeldata.belajar.maven.with.di.spring.DataBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -15,32 +16,7 @@ import org.springframework.context.annotation.Configuration;
  * @author dimasm93
  */
 @Configuration
+@ComponentScan("com.tabeldata.belajar.maven")
 public class ConfigurationSpring {
-
-    @Bean
-    public DataBean withBeans(OtherBean bean) {
-//        construktor injection
-        DataBean aBean = new DataBean(bean);
-        aBean.setId("qwerqwerewqrewqr");
-        aBean.setNama("Dimas Maryanto");
-        return aBean;
-    }
-
-    @Bean
-    public DataBean withBeans2(OtherBean bean) {
-//        setter injection
-        DataBean aBean = new DataBean();
-        aBean.setId("bean asli");
-        aBean.setNama("Dimas Maryanto");
-        aBean.setBean(bean);
-        return aBean;
-    }
-
-    @Bean
-    public OtherBean otherBean() {
-        OtherBean aBean = new OtherBean();
-        aBean.setId("otherId");
-        aBean.setNama("Muhamad yusuf");
-        return aBean;
-    }
+   
 }

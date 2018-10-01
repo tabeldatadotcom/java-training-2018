@@ -6,24 +6,28 @@
 package com.tabeldata.belajar.maven.with.di.spring;
 
 import com.tabeldata.belajar.maven.no.di.OtherBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
  *
  * @author dimasm93
  */
+@Component
 public class DataBean {
 
     public DataBean() {
     }
 
+    @Autowired
     public DataBean(OtherBean bean) {
         this.bean = bean;
     }
     
-    
-    
+    @Value("asfsafdaf")
     private String id;
+    @Value("234324234")
     private String nama;
     private OtherBean bean;
 
