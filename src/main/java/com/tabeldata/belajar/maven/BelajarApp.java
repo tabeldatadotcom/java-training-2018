@@ -5,12 +5,22 @@
  */
 package com.tabeldata.belajar.maven;
 
+import com.tabeldata.belajar.maven.no.di.Bean;
+import com.tabeldata.belajar.maven.with.di.spring.DataBean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 /**
  *
  * @author dimasm93
  */
 public class BelajarApp {
-    public static void main(String[] arsg){
+
+    public static void main(String[] arsg) {
         System.out.println("Halo ini java maven");
+        ApplicationContext context = new AnnotationConfigApplicationContext(ConfigurationSpring.class);
+
+        DataBean aBean = context.getBean(DataBean.class);
+        System.out.println(aBean.toString());
     }
 }
