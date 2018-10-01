@@ -59,11 +59,12 @@ public class DataBean {
 
     @Override
     public String toString() {
-        return String.format("{%s, %s, otherBean: { %s, %s }}", 
+        return String.format("{%s, %s, otherBean: { %s, %s }, %s}", 
                 this.id, 
                 this.nama, 
                 this.bean.getId(), 
-                this.bean.getNama()); //To change body of generated methods, choose Tools | Templates.
+                this.bean.getNama(),
+                this.bean.toString()); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

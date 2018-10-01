@@ -6,6 +6,7 @@
 package com.tabeldata.belajar.maven.no.di;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Component;
  * @author dimasm93
  */
 @Component
+@Scope("prototype")
 public class OtherBean {
     
     @Value("1341242134")
