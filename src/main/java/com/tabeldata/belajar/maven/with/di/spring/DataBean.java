@@ -5,6 +5,7 @@
  */
 package com.tabeldata.belajar.maven.with.di.spring;
 
+import com.tabeldata.belajar.maven.no.di.OtherBean;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,6 +16,7 @@ public class DataBean {
     
     private String id;
     private String nama;
+    private OtherBean bean;
 
     public String getId() {
         return id;
@@ -32,9 +34,23 @@ public class DataBean {
         this.nama = nama;
     }
 
+    public OtherBean getBean() {
+        return bean;
+    }
+
+    public void setBean(OtherBean bean) {
+        this.bean = bean;
+    }
+    
+    
+
     @Override
     public String toString() {
-        return String.format("{%s, %s}", this.id, this.nama); //To change body of generated methods, choose Tools | Templates.
+        return String.format("{%s, %s, otherBean: { %s, %s }}", 
+                this.id, 
+                this.nama, 
+                this.bean.getId(), 
+                this.bean.getNama()); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

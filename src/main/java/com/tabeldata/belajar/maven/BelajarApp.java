@@ -5,7 +5,7 @@
  */
 package com.tabeldata.belajar.maven;
 
-import com.tabeldata.belajar.maven.no.di.Bean;
+import com.tabeldata.belajar.maven.no.di.OtherBean;
 import com.tabeldata.belajar.maven.with.di.spring.DataBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

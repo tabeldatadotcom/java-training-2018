@@ -9,7 +9,7 @@ package com.tabeldata.belajar.maven.no.di;
  *
  * @author dimasm93
  */
-public class Bean {
+public class OtherBean {
     
     private String id;
     private String nama;
@@ -29,13 +29,5 @@ public class Bean {
     public void setNama(String nama) {
         this.nama = nama;
     }
-
-    @Override
-    public String toString() {
-        return String.format("{%s, %s}", this.id, this.nama); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
-    
     
 }
